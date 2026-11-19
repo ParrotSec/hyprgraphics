@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -eu
+
+mkdir -p "$AUTOPKGTEST_TMP"
+cp -r tests "$AUTOPKGTEST_TMP"/tests
+cp debian/tests/CMakeLists.txt "$AUTOPKGTEST_TMP"/CMakeLists.txt
+
+mkdir -p "$AUTOPKGTEST_TMP"/build
+cd "$AUTOPKGTEST_TMP"/build
+
+cmake ..
+cmake --build . --target tests
+ctest --output-on-failure

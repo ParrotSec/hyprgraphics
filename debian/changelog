@@ -1,0 +1,87 @@
+hyprgraphics (0.5.1-2parrot1) echo; urgency=medium
+
+  * Non-maintainer upload.
+  * rebuild package for parrot os.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Thu, 19 Nov 2026 15:56:56 +0100
+
+hyprgraphics (0.5.1-2~bpo13+1) trixie-backports; urgency=medium
+
+  * Rebuild for trixie-backports.
+
+ -- Alex Myczko <tar@debian.org>  Mon, 27 Apr 2026 19:34:28 +0000
+
+hyprgraphics (0.5.1-2) unstable; urgency=medium
+
+  * d/t/control: add allow-stderr restriction to upstream-tests
+  * d/control: bump S-V to 4.7.4, remove RRR and Priority: optional
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Mon, 13 Apr 2026 19:22:40 +0800
+
+hyprgraphics (0.5.1-1) unstable; urgency=medium
+
+  * New upstream version 0.5.1
+  * d/control: Build-dep on libdrm-dev and libgles-dev to match upstream
+
+ -- Chow Loong Jin <hyperair@debian.org>  Tue, 07 Apr 2026 22:50:57 +0800
+
+hyprgraphics (0.5.0-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Chow Loong Jin <hyperair@debian.org>  Sat, 03 Jan 2026 14:18:03 +0800
+
+hyprgraphics (0.5.0-1) experimental; urgency=medium
+
+  * New upstream version 0.5.0
+  * Rename packages for soname bump
+
+ -- Chow Loong Jin <hyperair@debian.org>  Mon, 29 Dec 2025 23:52:28 +0800
+
+hyprgraphics (0.4.0-3) unstable; urgency=medium
+
+  [ Julian Sax ]
+  * Add -dev deps which are included in header files
+
+ -- Chow Loong Jin <hyperair@debian.org>  Wed, 17 Dec 2025 18:45:23 +0800
+
+hyprgraphics (0.4.0-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Chow Loong Jin <hyperair@debian.org>  Mon, 24 Nov 2025 14:56:00 +0800
+
+hyprgraphics (0.4.0-1) experimental; urgency=medium
+
+  * New upstream release
+  * Bump shared library SONAME to 3:
+    - Renamed binary package to libhyprgraphics3
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Fri, 21 Nov 2025 23:14:55 +0100
+
+hyprgraphics (0.3.0-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Chow Loong Jin <hyperair@debian.org>  Tue, 11 Nov 2025 17:50:02 +0800
+
+hyprgraphics (0.3.0-1) experimental; urgency=medium
+
+  * New upstream release
+  * Bump shared library SONAME to 2:
+    - Renamed binary package to libhyprgraphics2
+  * d/control: add libhyprgraphics2 binary
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Sat, 08 Nov 2025 13:41:05 +0100
+
+hyprgraphics (0.2.0-2) unstable; urgency=medium
+
+  * d/patches: fix FTBFS on big endian
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Fri, 24 Oct 2025 12:46:49 +0200
+
+hyprgraphics (0.2.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1099341)
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Wed, 08 Oct 2025 16:09:53 +0200

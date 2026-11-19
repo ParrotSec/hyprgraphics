@@ -1,0 +1,24 @@
+From: Zach DeCook <zachdecook@librem.one>
+Date: Fri, 24 Oct 2025 12:29:48 +0200
+Subject: allow jpeg loading on big endian
+
+Bug: https://github.com/hyprwm/hyprgraphics/pull/11
+Origin: https://github.com/hyprwm/hyprgraphics/pull/11
+---
+ src/image/formats/Jpeg.cpp | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/src/image/formats/Jpeg.cpp b/src/image/formats/Jpeg.cpp
+index 849efac..aaa3e83 100644
+--- a/src/image/formats/Jpeg.cpp
++++ b/src/image/formats/Jpeg.cpp
+@@ -17,9 +17,6 @@ std::expected<cairo_surface_t*, std::string> JPEG::createSurfaceFromJPEG(const s
+     if (!std::filesystem::exists(path))
+         return std::unexpected("loading jpeg: file doesn't exist");
+ 
+-    if (__BYTE_ORDER__ != __ORDER_LITTLE_ENDIAN__)
+-        return std::unexpected("loading jpeg: cannot load on big endian");
+-
+     std::ifstream file(path, std::ios::binary | std::ios::ate);
+     file.exceptions(std::ifstream::failbit | std::ifstream::badbit | std::ifstream::eofbit);
+     std::vector<uint8_t> bytes(file.tellg());
